@@ -9,9 +9,10 @@ export async function POST(request: Request) {
 
   try {
     event = stripe.webhooks.constructEvent(body, signature!, process.env.STRIPE_WEBHOOK_SECRET as string);
-  } catch (error: any) {
-    console.error(`Webhook Error: ${error.message}`);
-    return NextResponse.json({ error: `Webhook Error: ${error.message}` }, { status: 400 });
+  } catch (err: unknown) {
+    const message = (err as Error)?.message ?? 'Unknown error';
+    console.error(`Webhook Error: ${message}`);
+    return NextResponse.json({ error: `Webhook Error: ${message}` }, { status: 400 });
   }
 
   // イベントタイプに応じて処理を分岐
