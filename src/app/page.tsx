@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Suspense } from 'react';
 export default function Home() {
   return (
-    <Suspense fallback="loading...">
+    <Suspense fallback='loading...'>
       <Box
         sx={{
           display: 'grid',
@@ -75,6 +75,6 @@ export default function Home() {
         </Box>
       </Box>
       <Error />
-    </Susp>
+    </Suspense>
   );
 }
