@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'LINE Seed JP Rg';
+  font-style: normal;
+  font-weight: 400;
+  /* src: url("/LINESeedJP/Web/WOFF/LINESeedJP_OTF_Rg.woff") format('woff'); */
+  src:
+    url("/LINESeed/WOFF/LINESeedJP_OTF_Rg.woff") format("woff"),
+    url("/LINESeed/WOFF/LINESeedJP_TTF_Rg.eot") format("eot");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LINE Seed JP Bd';
+  font-style: normal;
+  font-weight: bold;
+  /* src: url("/LINESeedJP/Web/WOFF/LINESeedJP_OTF_Bd.woff") format('woff'); */
+  src:
+    url("/LINESeed/WOFF/LINESeedJP_OTF_Bd.woff") format("woff"),
+    url("/LINESeed/WOFF/LINESeedJP_TTF_Bd.eot") format("eot");
+  font-display: swap;
+}
+
+
+:root {
+  --font-rg: 'LINE Seed JP Rg', sans-serif;
+  --font-bd: 'LINE Seed JP Bd', sans-serif;
+
+  --border-radius: 15px;
+}
+
+html,
+body {
+  font-family: var(--font-rg) !important;
+  background-color: #d9d9d9;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
